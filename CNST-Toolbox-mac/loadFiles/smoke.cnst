@@ -1,0 +1,8 @@
+# Minimal CNST script (derived from NIST Examples/CNSTscripting/scriptingBasicShapes.cnst)
+0.001 gdsReso
+0.001 shapeReso
+
+<myEllipseStructure  struct>
+
+44 layer
+0 0 40 100 88 22.0 ellipse
