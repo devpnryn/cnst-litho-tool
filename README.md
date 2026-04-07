@@ -6,7 +6,7 @@ The toolbox is **NIST’s software**; this repo only provides a convenient layou
 
 ## Quick start
 
-1. Install **Java 8** (see options in **`CNST-Toolbox-mac/SETUP.txt`**).
+1. Install **Java 8 with JavaFX** — Azul **Zulu 8 JDK FX** (see **`CNST-Toolbox-mac/SETUP.txt`**; plain `zulu@8` without FX is not enough).
 2. Double-click **`CNST-Toolbox-mac/RUN-Mac.command`** or run the JAR from that folder as described in **`SETUP.txt`**.
 3. Put layout scripts in **`loadFiles/`**; GDS output goes to **`out/`**.
 
@@ -28,7 +28,7 @@ If you publish work that used the CNST Nanolithography Toolbox, NIST asks that y
 
 ## Java on macOS
 
-**`SETUP.txt`** describes installing **Azul Zulu 8** via browser download, **Homebrew** (`brew install --cask zulu@8`), or **`curl`**. See [Azul’s downloads](https://www.azul.com/downloads/?version=java-8-lts&package=jdk#zulu) for current installers (third party; not affiliated with this repo).
+**`SETUP.txt`** describes installing **Azul Zulu 8 JDK FX** (Java 8 + JavaFX) via browser or **`curl`**. Use the **JDK FX** package, not the JDK-only build — `brew install --cask zulu@8` does not include JavaFX and the app will not start. Downloads: [Azul Zulu 8 LTS, JDK FX](https://www.azul.com/downloads/?version=java-8-lts&package=jdk-fx#zulu) (third party; not affiliated with this repo).
 
 ## Credits
 

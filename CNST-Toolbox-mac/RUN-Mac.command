@@ -8,7 +8,7 @@ if [[ -z "${JAVA_HOME:-}" ]] && /usr/libexec/java_home -v 1.8 &>/dev/null; then
 fi
 
 if [[ -z "${JAVA_HOME:-}" ]] || [[ ! -x "${JAVA_HOME}/bin/java" ]]; then
-  echo "Java 8 not found. Install Zulu 8 for macOS — see SETUP.txt in this folder."
+  echo "Java 8 not found. Install Azul Zulu 8 JDK FX for macOS — see SETUP.txt in this folder."
   echo ""
   read -r -p "Press Enter to close..."
   exit 1

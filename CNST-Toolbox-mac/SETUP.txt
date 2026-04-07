@@ -5,28 +5,30 @@ What this folder is
   (USB, AirDrop, zip, shared drive). You only need a web browser and/or
   Terminal for the steps below.
 
-1) Install Java 8 (Azul Zulu 8)
+1) Install Java 8 with JavaFX (Azul Zulu 8 JDK FX)
 
-  Pick ONE of these. All install the same JDK; use whichever fits you.
+  The toolbox needs Java 8 and JavaFX together. A plain Java 8 JDK does not
+  work: you may see “This installation does not support JavaFX” or “Could not
+  find or load main class CNSTnanoToolbox.CNSTnano”.
 
-  A — Web browser (simplest)
+  In particular, `brew install --cask zulu@8` installs standard Zulu 8
+  without JavaFX — use the JDK FX build below instead. (Homebrew’s `zulufx`
+  cask targets current Java versions, not 8.)
+
+  Pick ONE of these.
+
+  A — Web browser (simplest, recommended)
       Open:
-        https://www.azul.com/downloads/?version=java-8-lts&package=jdk#zulu
-      Choose: macOS, then the installer that matches the Mac
+        https://www.azul.com/downloads/?version=java-8-lts&package=jdk-fx#zulu
+      On the page, choose package type JDK FX (not JDK only). Then choose
+      macOS and the installer that matches the Mac:
         • Apple Silicon (M1 / M2 / M3 / …) → aarch64 / ARM 64-bit
         • Intel Mac → x86 64-bit
       Download the .dmg, open it, and run the installer inside.
 
-  B — Homebrew (if you already use Homebrew)
-      Install Homebrew first if needed: https://brew.sh
-      In Terminal:
-        brew install --cask zulu@8
-      Enter your Mac password when the installer asks. When it finishes,
-      Java 8 is installed.
-
-  C — curl (Terminal, no browser download click)
-      Get the exact .dmg URL from the Azul page above (same Java 8 → macOS
-      → your CPU type → copy the download link), then in Terminal, for example:
+  B — curl (Terminal, no browser download click)
+      Get the exact .dmg URL from the Azul page above (Java 8 LTS, JDK FX,
+      macOS → your CPU → copy the download link), then in Terminal, for example:
         cd ~/Downloads
         curl -fLO 'PASTE_THE_URL_HERE'
         open zulu8*.dmg
@@ -35,9 +37,9 @@ What this folder is
       Example direct links (filenames change when Azul releases updates; if
       a link fails, use method A or copy a fresh URL from Azul):
         Apple Silicon:
-        https://cdn.azul.com/zulu/bin/zulu8.92.0.21-ca-jdk8.0.482-macosx_aarch64.dmg
+        https://cdn.azul.com/zulu/bin/zulu8.92.0.21-ca-fx-jdk8.0.482-macosx_aarch64.dmg
         Intel Mac:
-        https://cdn.azul.com/zulu/bin/zulu8.92.0.21-ca-jdk8.0.482-macosx_x64.dmg
+        https://cdn.azul.com/zulu/bin/zulu8.92.0.21-ca-fx-jdk8.0.482-macosx_x64.dmg
 
 2) Start the program
    Double-click: RUN-Mac.command
